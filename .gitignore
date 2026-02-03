@@ -1,0 +1,16 @@
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment variables (CRITICAL: hide API keys!)
+.env
+.env.local
+.env.*
+
+# Data folder (optional: exclude JSON output if not needed)
+main/data/
+
+# Mac system files
+.DS_Store
