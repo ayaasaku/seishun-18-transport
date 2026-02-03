@@ -172,13 +172,11 @@ async def save_to_json(data, file_path, indent=4, ensure_ascii=False):
     - indent=4: Human-readable formatting
     - ensure_ascii=False: Preserve Japanese/non-ASCII characters (CRITICAL for your station names!)
     """
-    # Convert async file writing to a thread (no async loop block)
     await asyncio.to_thread(
-        _sync_save_json,  # Call the synchronous save function in a thread
+        _sync_save_json,  
         data, file_path, indent, ensure_ascii
     )
 
-# Synchronous helper function (runs in a thread)
 def _sync_save_json(data, file_path, indent, ensure_ascii):
     # 1. If the folder doesn't exist (e.g., "data/"), create it
     folder = os.path.dirname(file_path)
