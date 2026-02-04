@@ -10,7 +10,7 @@ __pycache__/
 .env.*
 
 # Data folder (optional: exclude JSON output if not needed)
-data/
+
 .vscode/
 
 # Mac system files
